@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title><%=title %></title>
+		<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/blog.css" rel="stylesheet">
+	</head>
+	<body>
+		<%# The menu/navigation bar %>
+		<div class="blog-masthead">
+			<div class="container">
+				<nav class="nav blog-nav">
+					<% for(let i of menu_items){%>
+					<a class="nav-link<%- i.name==current_menu_item?" active":""; %>" href="<%-i.url;%>">
+						<%= i.name;%>
+					</a>
+					<% }%>
+				</nav>
+			</div>
+		</div>
+
